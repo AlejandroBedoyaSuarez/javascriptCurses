@@ -10,74 +10,174 @@
  *
  * DIFICULTAD EXTRA (opcional):
  * Crea un programa que imprima por consola todos los números comprendidos
- * entre 10 y 55 (incluidos), pares, y que no son ni el 16 ni múltiplos de 3. 
+ * entre 10 y 55 (incluidos), pares, y que no son ni el 16 ni múltiplos de 3.
  * -----------------------------------------------------------------------------------------------------*/
 
 //Operadores Aritméticos
 //Suma
 console.log("¿La suma entre 4+2 es?");
-let valor1= 4;
-let valor2= 2;
-let suma= valor1+valor2;
+let valor1 = 4;
+let valor2 = 2;
+let suma = valor1 + valor2;
 console.log(suma);
 
 //Resta
 console.log("La resta entre 4-2 es?");
-let resta= valor1-valor2;
+let resta = valor1 - valor2;
 console.log(resta);
 
 //Multiplicación
 console.log("La multiplicación entre 4 por 2 es?");
-let multiplicacion= valor1*valor2;
+let multiplicacion = valor1 * valor2;
 console.log(multiplicacion);
 
 //División
 console.log("La división entre 4 para 2 es?");
-let division= valor1/valor2;
-console.log (division);
+let division = valor1 / valor2;
+console.log(division);
 
 //Módulo
 console.log("Cuál es el valor residual (módulo) de la división entre 4/2?");
-let modulo= valor1%valor2;
+let modulo = valor1 % valor2;
 //se hace 0 ya que 4 para 2= 2 y el valor residual se hace 0
 console.log(modulo);
 //pero si no fuera divisible
 
-let valor3= 10;
-let valor4= 3;
+let valor3 = 10;
+let valor4 = 3;
 console.log("Digame el módulo entre el valor 10 y el valor 3");
-let modulo2=valor3%valor4;
+let modulo2 = valor3 % valor4;
 //saldrá uno ya que no es divisible 10 para 3
 console.log(modulo2);
 
 //división decimal
 //División
 console.log("La división entre 10 para 3 es?");
-let division2= valor3/valor4;
-console.log (division2);
+let division2 = valor3 / valor4;
+console.log(division2);
 
 //Exponensial
 //Con mathpow math.pow(base, exponente)
-let exponente= Math.pow(4, 2);
+console.log("Exponentes");
+let exponente = Math.pow(4, 2);
 console.log(exponente);
-//Con comando ** es: 
-let exponenteCodigo= 4**2;
+//Con comando ** es:
+let exponenteCodigo = 4 ** 2;
 console.log(exponenteCodigo);
 
 //División entera
 //basicamente nos da solo el resultado entero de la división aunque sea decimal
 //~~ (dividendo/divisor)
-let divisionEntera= ~~(10/3); 
-console.log(divisionEntera)
+console.log("Divisiones Enteras");
+let divisionEntera = ~~(10 / 3);
+console.log(divisionEntera);
 
 //Operadores de Comparación
 //Igualdad
-console.log(5==5); //Verificación con Boolean
-console.log(valor1==valor3);
+console.log("Operadores de Comparación: Igualdad");
+console.log(5 == 5); //Verificación con Boolean
+console.log(valor1 == valor3);
 
 //Desigualdad
 //10 es distinto de 3? true
-console.log(10!=3);
-let valor5= 4;
-console.log(valor1!=valor5)
+console.log("Operadores de Comparación: Desigualdad");
+console.log(10 != 3);
+let valor5 = 4;
+//valor 1= 4 es distinto a valor5=4 ? False
+console.log(valor1 != valor5);
+
+//Mayor, Menor, Mayor o igual, Menor o igual
+console.log("Menor y Mayor");
+console.log(10 < 4);
+console.log(10 > 4);
+console.log(10 <= 4);
+console.log(10 >= 4);
+
+//Operadores Lógicos
+console.log("Operadores Lógicos");
+let operador1 = 4;
+let operador2 = 5;
+let operador3 = 6;
+let operador4 = 4;
+//Aquí el && significa and (y)
+//Sirve para hacer que si ambas condiciones se cumplen, el resultado será "verdadero" y si alguna de las dos no se cumple será "Falso"
+console.log("Operador && que significa /y/ ");
+console.log(operador1 < operador2 && operador4 < operador3);
+console.log(operador1 <= operador4 && operador2 < operador3);
+//sale false porque 4 no es mayor a 6, si una condición no se cumple automaticamente el resultado será falso
+console.log(operador1 > operador3 && operador4 <= operador1);
+
+//Operador con "o"
+// Se hace con || y si una condición es verdadera entonces el resultado es verdadero, solo saldrá falso si ambas son falsas
+console.log("Operador con /o/");
+console.log(operador1 < operador2 || operador4 < operador3);
+console.log(operador1 > operador3 || operador4 <= operador1);
+console.log(operador1 > operador2 || operador1 > operador4);
+
+//Operador NOT que se representa con "!"
+console.log("Operador con NOT / !");
+//Basicamente cambia el valor por su opuesto
+let esVerdadero = true;
+console.log(!esVerdadero);
+console.log(!(5 < 3));
+
+//Operadores de Asignación
+// el = es un operador que da resultado
+console.log("Operadores de Asignación");
+let my_number = 13;
+//+= sirve para ir sumando con el igual
+my_number += 1; //variable= variable+numero;
+//saldrá un número más porque empeiza desde el 0
+console.log(my_number);
+my_number -= 1;
+console.log(my_number);
+my_number *= 2;
+console.log(my_number);
+my_number /= 2;
+console.log(my_number);
+my_number %= 2;
+console.log(my_number);
+
+//Operadores de Identidad
+console.log("Operadores de Identidad");
+//Igualdad Estricta
+/*
+Este operador compara si dos valores son idénticos en valor 
+y tipo de dato.
+
+Devuelve "true" si ambos son iguales en valor y tipo.
+
+Devuelve "false" si los tipos o los valores son diferentes.
+*/
+console.log(5 === 5);
+console.log(5 === "5"); //sale falso porque uno es número y el otro string gracias a las ""
+console.log(null === null);
+console.log(true === 1); //es false porque uno es tipo boolean y el otro es tipo entero
+
+console.log("¿Cuál es la diferencia entre == y ===?")
+console.log("== verifica solo el valor haciendo conversión implícita si es necesario.")
+console.log("===  Verifica igualdad en valor y tipo, sin hacer conversión implícita.")
+
+//Operadores de Pertenencia
+console.log("Operadores de Pertenencia")
+//Operador con In
+console.log("Con /in/")
+//con objetos
+console.log("Con Objetos:")
+//let variable= {objeto};
+let persona= {nombre: "Jonnath", edad: 19};
+//Me da true ya que "nombre" si pertenece a la variable persona
+console.log("nombre" in persona);
+//Me da false ya que "estudios" no pertenece a la variable persona
+console.log("estudios" in persona);
+//Con Arrays
+console.log("Con Arrays:");
+let numerosArrays= [0,1,2,3,4];
+//0 está dentro de los números del Array
+console.log(0 in numerosArrays);
+//100 no está dentro de los números del Array
+console.log (100 in numerosArrays);
+
+//Estructuras de Control
+console.log("Estructuras de Control")
 
