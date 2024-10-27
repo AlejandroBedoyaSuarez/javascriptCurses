@@ -154,30 +154,78 @@ console.log(5 === "5"); //sale falso porque uno es número y el otro string grac
 console.log(null === null);
 console.log(true === 1); //es false porque uno es tipo boolean y el otro es tipo entero
 
-console.log("¿Cuál es la diferencia entre == y ===?")
-console.log("== verifica solo el valor haciendo conversión implícita si es necesario.")
-console.log("===  Verifica igualdad en valor y tipo, sin hacer conversión implícita.")
+console.log("¿Cuál es la diferencia entre == y ===?");
+console.log(
+  "== verifica solo el valor haciendo conversión implícita si es necesario."
+);
+console.log(
+  "===  Verifica igualdad en valor y tipo, sin hacer conversión implícita."
+);
 
 //Operadores de Pertenencia
-console.log("Operadores de Pertenencia")
+console.log("Operadores de Pertenencia");
 //Operador con In
-console.log("Con /in/")
+console.log("Con /in/");
 //con objetos
-console.log("Con Objetos:")
+console.log("Con Objetos:");
 //let variable= {objeto};
-let persona= {nombre: "Jonnath", edad: 19};
+let persona = { nombre: "Jonnath", edad: 19 };
 //Me da true ya que "nombre" si pertenece a la variable persona
 console.log("nombre" in persona);
 //Me da false ya que "estudios" no pertenece a la variable persona
 console.log("estudios" in persona);
 //Con Arrays
 console.log("Con Arrays:");
-let numerosArrays= [0,1,2,3,4];
+let numerosArrays = [0, 1, 2, 3, 4];
 //0 está dentro de los números del Array
 console.log(0 in numerosArrays);
 //100 no está dentro de los números del Array
-console.log (100 in numerosArrays);
+console.log(100 in numerosArrays);
 
 //Estructuras de Control
-console.log("Estructuras de Control")
+console.log("Estructuras de Control");
 
+//Condicionales
+console.log("Estructuras de Control Condicionales");
+let condicional1 = "JonnathDev";
+if (condicional1 == "JonnathDev") {
+  console.log("Mi condicional tiene como resultado: " + condicional1);
+} else {
+  console.log("No cumple la condición");
+}
+//La diferencia es que aquí no se cumple porque ese "1" no existe en la condicional de la variable
+if (condicional1 == "JonnathDev1") {
+  console.log("Mi condicional tiene como resultado: " + condicional1);
+} else {
+  console.log("No cumple la condición");
+}
+
+//Se pueden hacer más comprobaciones
+console.log("If con más de una comprobación")
+
+let nombrePersona= "Mauricio";
+let apellidoPersona= "Loja"
+if (nombrePersona=="Kevin") {
+    console.log("Es el asesino")
+
+}else if (apellidoPersona=="Loja") {
+    console.log("Es sospecho del asesinato")
+
+}else{
+    console.log("No es sospechoso")
+}
+
+//Iterativas
+console.log("Estructuras de Control Iterativas"); 
+//Imprimir los números del 0 al 10
+for (let i= 0; i <=10; i++) {
+    console.log(i)
+}
+
+console.log("Con While")
+//While es una condición que dice que se ejecutara mientras esa condición sea verdadera
+let numeroWhile=0;
+while (numeroWhile < 10) {
+    numeroWhile += 1
+    console.log(numeroWhile)
+}
