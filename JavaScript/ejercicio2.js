@@ -201,31 +201,78 @@ if (condicional1 == "JonnathDev1") {
 }
 
 //Se pueden hacer más comprobaciones
-console.log("If con más de una comprobación")
+console.log("If con más de una comprobación");
 
-let nombrePersona= "Mauricio";
-let apellidoPersona= "Loja"
-if (nombrePersona=="Kevin") {
-    console.log("Es el asesino")
-
-}else if (apellidoPersona=="Loja") {
-    console.log("Es sospecho del asesinato")
-
-}else{
-    console.log("No es sospechoso")
+let nombrePersona = "Mauricio";
+let apellidoPersona = "Loja";
+if (nombrePersona == "Kevin") {
+  console.log("Es el asesino");
+} else if (apellidoPersona == "Loja") {
+  console.log("Es sospecho del asesinato");
+} else {
+  console.log("No es sospechoso");
 }
 
 //Iterativas
-console.log("Estructuras de Control Iterativas"); 
+console.log("Estructuras de Control Iterativas");
 //Imprimir los números del 0 al 10
-for (let i= 0; i <=10; i++) {
-    console.log(i)
+for (let i = 0; i <= 10; i++) {
+  console.log(i);
 }
 
-console.log("Con While")
+console.log("Con While");
 //While es una condición que dice que se ejecutara mientras esa condición sea verdadera
-let numeroWhile=0;
+let numeroWhile = 0;
 while (numeroWhile < 10) {
-    numeroWhile += 1
-    console.log(numeroWhile)
+  numeroWhile += 1;
+  console.log(numeroWhile);
+}
+
+//Manejo de Excepciones
+console.log("Manejo de Excepciones");
+// try - catch
+try {
+  let datos = JSON.parse('{ "nombre": "Jonnath" }'); // Formato JSON válido
+  console.log(datos.nombre); // "Jonnath"
+} catch (error) {
+  console.log("Error al parsear JSON");
+} finally {
+  console.log("Finalizó el intento de lectura del JSON.");
+}
+
+try {
+  let megadatos = "Alejandro";
+  console.log(megadatos);
+} catch (error1) {
+  console.log("Error al traducir el nombre");
+} finally {
+  console.log("Finalizado la traducción");
+}
+
+try{
+  datosnumericos=10/0
+}catch (error3){
+ console.log("Se ha producido un error")
+}finally{
+  console.log("Proceso Finalizado")
+}
+
+try {
+  let datosnumericos1 = 10 / 2;  // Declaración y operación correcta
+  console.log("Resultado:", datosnumericos1);  // Muestra el resultado
+} catch (error4) {
+  //Funciona gracias al mensaje y variable.message
+  console.log("Se ha producido un error: " + error4.message);  // Manejo de error
+} finally {
+  console.log("Proceso Finalizado");  // Siempre se ejecuta
+}
+
+//Ejercicio Extra
+
+//que comience en 10, sea menor a 56 y que vaya creciendo de uno en uno
+for (let i = 10; i<56; i++) {
+  // si i es multiplo de 2 entonces es 0 AND NOT i=16
+  if (i%2==0 && i!=16) {
+    console.log(i)
+  }
 }
